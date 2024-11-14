@@ -22,7 +22,17 @@ public class Main {
     }
 
     public static void fillNonStandardDeck(Card[] deck, int numDecks){
-        
+        int k = 0;
+        while(k != numDecks){
+            int j = 1;
+            for(int i = 0; i < deck.length; i+=4){
+                deck[i + (52*k)] = new Card("clubs", j);
+                deck[i+1 + (52*k)] = new Card("diamonds", j);
+                deck[i+2 + (52*k)] = new Card("hearts", j);
+                deck[i+3 + (52*k)] = new Card("spades", j);
+                j++;
+            }
+        }
     }
 
     public static Card draw(Card[] deck){
