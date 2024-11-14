@@ -32,6 +32,7 @@ public class Main {
                 deck[i+3 + (52*k)] = new Card("spades", j);
                 j++;
             }
+            k++;
         }
     }
 
