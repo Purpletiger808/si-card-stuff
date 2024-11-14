@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Card {
     Suit cardSuit;
     String suitString;
@@ -81,6 +83,18 @@ public class Card {
 
         this.value = newValue;
     }
+
+
+    public boolean equals(Card c){
+        boolean isEqual = false;
+
+        if(this.value == c.getValue() && this.cardSuit == c.getCardSuit()){
+            isEqual = true;
+        }
+
+        return isEqual;
+    }
+
 
     public String toString(){
         if(value < 2 || value >= 11){
